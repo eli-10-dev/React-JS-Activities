@@ -34,7 +34,7 @@ function App() {
         setPhotoArray(urls); 
         // console.log("PhotoArray: ", photoArray);
 
-        if (urls > 0){
+        if (urls.length > 0){
           setRandomPhoto(urls[Math.floor(Math.random() * urls.length)]);
         } else {
           setRandomPhoto("https://static.vecteezy.com/system/resources/thumbnails/040/890/255/small_2x/ai-generated-empty-wooden-table-on-the-natural-background-for-product-display-free-photo.jpg");
@@ -62,7 +62,7 @@ function App() {
         })
         .then(data => {
           setPhotoArray(prevArray => [...prevArray, ...data.map(item => item.urls.full)]);
-          console.log("PhotoArray: ", photoArray);
+          // console.log("PhotoArray: ", photoArray);
           setRandomPhoto(data[Math.floor(Math.random() * data.length)].urls.full);
           setCount(count + 1);
         })
@@ -93,10 +93,10 @@ function App() {
 
         <div className="buttons flex">
 
-          <a class="fa-brands fa-square-twitter fa-lg" href="twitter.com/intent/tweet" target="_blank" id="tweet-quote">
+          <a className="fa-brands fa-square-twitter fa-lg" href="twitter.com/intent/tweet" target="_blank" id="tweet-quote">
           </a>
    
-          <button class="fa-solid fa-square-caret-right fa-lg" id="new-quote" onClick={getRandomIndex}>
+          <button className="fa-solid fa-square-caret-right fa-lg" id="new-quote" onClick={getRandomIndex}>
           </button>
         </div>
       </div>
