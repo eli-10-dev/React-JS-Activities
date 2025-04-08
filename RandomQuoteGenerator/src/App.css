@@ -1,0 +1,84 @@
+.body{
+  width: 100%;
+  height: 100vh;
+}  
+
+.quote-box{
+  flex-direction: column;
+  width: 50%;
+  height: 70vh;
+  color: black;
+  background-color: rgb(217, 217, 217);
+  box-shadow: 10px 10px 5px 2px gray;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+.quote-border{
+  width: 60%;
+  height: 40%;
+  text-align: center;
+}
+
+.authorContainer{
+  width: 100%;
+  height: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.author::before{
+  content: "- ";
+}
+
+.buttons{
+  margin-top: 1em;
+  gap: 0.3em;
+}
+
+#tweet-quote{
+  text-decoration: none;
+  color: black;
+}
+
+#tweet-quote:hover {
+  color: blue; 
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+#new-quote{
+  justify-self: flex-end;
+  padding: 0.5em;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+#new-quote:hover {
+  color: blue; 
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 935px){
+  .quote-box{
+    width: 80%;
+    height: 80vh;
+  }
+  
+  .quote-border{
+    width: 80%;
+    height: 60%;
+    text-align: center;
+  }
+}
