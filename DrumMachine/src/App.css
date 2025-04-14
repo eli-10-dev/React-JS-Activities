@@ -1,0 +1,130 @@
+*{
+  user-select: none;
+}
+
+.body{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+#drum-machine{
+  width: 80vh;
+  height: 80vh;
+  border: 1px solid black;
+  background-color: rgb(52,64,64);
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#drum-machine > p{
+  padding-top: 1em;
+  color: orangered;
+}
+.display-container{
+  flex: 1;
+  width: 100%;
+}
+
+#display{
+  width: 70%;
+  height: 2em;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.drumpad-container{
+  flex: 2;
+  width: 100%;
+  padding: 0.5em;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 8em);
+  grid-template-rows: repeat(3, 8em);
+}
+
+.drum-pad{
+  width: 7em;
+  height: 7em;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.heater_1, .heater_2, .heater_3{
+  background-color: rgba(227,112,83,255);
+}
+
+.heater_4, .clap, .open_hh{
+  background-color: rgba(247,186,113,255); 
+}
+
+.kick_n_hat, .kick, .closed_hh{
+  background-color: rgba(247,215,114,255);
+}
+
+.drum-pad:active, .drum-pad.active{
+  border: 1px solid white;
+  color: white;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px){
+  #drum-machine{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    display: grid;
+  }
+  
+  .display-container{
+    flex: 1;
+    width: 100%;
+  }
+  
+  .drumpad-container{
+    flex: 2;
+    grid-template-columns: repeat(3, 7.5em);
+    grid-template-rows: repeat(3, 7.5em);
+  }
+  
+  .drum-pad{
+    width: 7em;
+    height: 7em;
+  }
+}
+
+@media screen and (max-width: 375px){
+  #drum-machine{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    display: grid;
+  }
+  
+  .display-container{
+    flex: 1;
+    width: 100%;
+  }
+  
+  .drumpad-container{
+    flex: 2;
+    grid-template-columns: repeat(3, 5.5em);
+    grid-template-rows: repeat(3, 5.5em);
+  }
+  
+  .drum-pad{
+    width: 5em;
+    height: 5em;
+  }
+}
