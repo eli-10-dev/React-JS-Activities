@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  color: white;
+  font-family: "Inconsolata";
+}
+
+.body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(186,73,73,255);
+}
+
+.sections-container{
+  flex: 1;  
+  width: 50%;
+  flex-direction: column;
+  background-color: rgba(193,92,92,255);
+  margin: 2em;
+  border-radius: 10px;
+}
+
+.time-settings{
+  width: 80%;
+  height: auto;
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.time-settings div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.break-time, .session-time{
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+.break-time div, .session-time div{
+  width: 100%;
+}
+
+#break-length, #session-length{
+  border-bottom: 1px solid white;
+}
+
+#break-increment, #session-increment{
+  border-right: 1px solid white;
+}
+
+.time-adjust{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#break-increment, #session-increment{
+  border-radius: 0 0 0 8px;
+}
+
+#break-decrement, #session-decrement{
+  border-radius: 0 0 8px 0;
+}
+
+.time-adjust div:hover{
+  color: black;
+  background-color: white;
+}
+
+.timer{
+  width: 50%;
+  height: auto;
+  flex-direction: column!important;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+#timer-label{
+  text-align: center;
+  font-size: 2em;
+}
+
+#time-left{
+  font-size: 10em;
+}
+ 
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3em;
+  font-size: 2em;
+}
+
+.buttons div{
+  border-radius: 8px;
+  padding: 5px;
+  width: 3em;
+  color: rgba(186,73,73,255);;
+  background-color: white;
+}
+
+.buttons div:hover{
+  box-shadow: 0px 0px 5px 2px rgb(197, 189, 189);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 850px){
+  .sections-container{
+    width: 80%;
+  }
+  #time-left{
+    font-size: 8em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sections-container{
+    width: 90%;
+  }
+  .time-settings{
+    width: 90%;
+  }
+  #time-left{
+    font-size: 5em;
+  }
+}
