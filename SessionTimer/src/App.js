@@ -62,8 +62,7 @@ function App() {
       setStudyTime(prev => prev > 1 ? prev - 1 : prev);
     }
   };
-
-
+  
   const formatTime = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = timeInSeconds % 60;
